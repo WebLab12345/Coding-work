@@ -1,0 +1,69 @@
+{
+  "name": "CarbonSuggestion",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Title of the suggestion"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the improvement suggestion"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "transportation",
+        "energy",
+        "food",
+        "consumption",
+        "waste"
+      ],
+      "description": "Category this suggestion applies to"
+    },
+    "potential_reduction": {
+      "type": "number",
+      "description": "Potential CO2 reduction in kg per year"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "easy",
+        "medium",
+        "hard"
+      ],
+      "description": "Implementation difficulty level"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "high",
+        "medium",
+        "low"
+      ],
+      "description": "Priority level for implementation"
+    },
+    "cost_impact": {
+      "type": "string",
+      "enum": [
+        "saves_money",
+        "neutral",
+        "costs_money"
+      ],
+      "description": "Financial impact of implementing suggestion"
+    },
+    "is_implemented": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether user has implemented this suggestion"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "category",
+    "potential_reduction",
+    "difficulty",
+    "priority"
+  ]
+}

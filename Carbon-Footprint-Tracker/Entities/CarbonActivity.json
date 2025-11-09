@@ -1,0 +1,54 @@
+{
+  "name": "CarbonActivity",
+  "type": "object",
+  "properties": {
+    "activity_type": {
+      "type": "string",
+      "enum": [
+        "transportation",
+        "energy",
+        "food",
+        "consumption",
+        "waste"
+      ],
+      "description": "Category of carbon-producing activity"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description of the activity"
+    },
+    "quantity": {
+      "type": "number",
+      "description": "Amount or quantity of the activity"
+    },
+    "unit": {
+      "type": "string",
+      "description": "Unit of measurement (miles, kWh, lbs, etc.)"
+    },
+    "carbon_impact": {
+      "type": "number",
+      "description": "Carbon footprint in kg CO2 equivalent"
+    },
+    "date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date when the activity occurred"
+    },
+    "location": {
+      "type": "string",
+      "description": "Location where activity took place"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional notes about the activity"
+    }
+  },
+  "required": [
+    "activity_type",
+    "description",
+    "quantity",
+    "unit",
+    "carbon_impact",
+    "date"
+  ]
+}
